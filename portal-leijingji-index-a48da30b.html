@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷竞技 · 简明指南与访问备忘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f3ed;
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', 'SimSun', serif;
+      color: #3d3a35;
+      line-height: 1.68;
+      padding: 2rem 1.2rem;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* 开场短句 — 像引子，留白 */
+    .opening {
+      margin-top: 1.2rem;
+      margin-bottom: 2.4rem;
+      font-size: 1rem;
+      color: #7a7268;
+      letter-spacing: 0.02em;
+      border-left: 4px solid #dacbb8;
+      padding-left: 1.2rem;
+      font-style: italic;
+    }
+
+    .opening p {
+      margin: 0.3rem 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: #4d443b;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid #ddd2c2;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #5b5248;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      border-left: 3px solid #cbb7a0;
+      padding-left: 0.85rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #7d5f45;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #cbb8a2;
+      transition: background 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #ece2d5;
+      text-decoration-color: #7d5f45;
+    }
+
+    .quote-block {
+      background: #f0e9e0;
+      border-left: 6px solid #b7a48b;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.98rem;
+      color: #4d453c;
+    }
+
+    .quote-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 1.2rem 0 1.8rem 0;
+      padding: 0;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding: 0.5rem 0 0.5rem 2rem;
+      border-bottom: 1px dashed #e0d6c9;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.6rem;
+      color: #9b8875;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+
+    .scene-note {
+      background: #efe9df;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin: 1.8rem 0;
+    }
+
+    .scene-note p {
+      margin-bottom: 0.5rem;
+    }
+
+    .scene-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-box {
+      background: #fcf9f5;
+      border: 1px solid #d8cdbe;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .info-box strong {
+      color: #6b5b4b;
+    }
+
+    .faq-mini {
+      margin: 2rem 0 1rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item .q {
+      font-weight: 600;
+      color: #5f5242;
+    }
+
+    .faq-item .a {
+      padding-left: 1.2rem;
+      color: #5d554b;
+      font-size: 0.95rem;
+    }
+
+    .ending {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #d8cdbd;
+      font-size: 0.95rem;
+      color: #70665b;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd0bf;
+      margin: 2.2rem 0 1rem 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+        font-size: 0.95rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .quote-block {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    .small-note {
+      color: #96897b;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 开场短句：像一段平实的前言 -->
+  <div class="opening">
+    <p>有些平台，你听说过，但未必仔细看过。</p>
+    <p>花几分钟读完这份笔记，再决定是否要进一步了解。</p>
+  </div>
+
+  <h1>雷竞技 · 简明指南</h1>
+
+  <p>
+    这里整理的是关于 <a href="https://portal-leijingji.com">雷竞技</a> 的一些基础信息与实用提醒。
+    如果你正在寻找一个更清晰的访问起点，或者想确认某些常见疑问，这篇页面或许正好有用。
+  </p>
+
+  <!-- 承接段落：为什么需要这样一篇介绍 -->
+  <h2>为什么要读这篇？</h2>
+  <p>
+    网络上的信息常常零散且重复。与其在多个页面里来回翻找，不如先把几个关键点理清楚。
+    下面的内容不是广告，也不是评测——更像是一份自己用过之后写下来的备忘。
+  </p>
+
+  <!-- 特点列表：用简明条目呈现核心特点 -->
+  <h2>几个值得了解的特点</h2>
+  <ul class="feature-list">
+    <li><strong>界面语言及区域</strong> —— 主要面向中文使用者，页面布局接近常见信息门户风格，减少适应成本。</li>
+    <li><strong>服务类型</strong> —— 围绕竞技相关资讯、数据与互动内容展开，不涉及金融或灰色领域。</li>
+    <li><strong>访问方式</strong> —— 通过浏览器直接打开，无需额外插件或注册特殊账号即可浏览大部分内容。</li>
+    <li><strong>内容更新节奏</strong> —— 信息保持一定频次的刷新，但并非实时流式推送，适合按需查看。</li>
+    <li><strong>帮助与反馈</strong> —— 页面底部或相关栏目中通常能找到联系方式或常见问题汇总。</li>
+  </ul>
+
+  <!-- 提示框：温和提醒 -->
+  <div class="quote-block">
+    <p><strong>💡 一个小提醒</strong></p>
+    <p>如果你第一次接触 <a href="https://portal-leijingji.com">雷竞技</a>，建议先浏览首页的整体导航，而不是直接跳进某个子页面。很多疑问其实在首页的说明段落里就有答案。</p>
+  </div>
+
+  <!-- 场景说明：什么情况下可能会用到这个网站 -->
+  <h2>适用的场景举例</h2>
+  <div class="scene-note">
+    <p>▪︎ 想了解当前有哪些比赛或活动正在进行，但不想下载App。<br>
+    ▪︎ 需要快速查阅某个赛事的基础数据或历史记录。<br>
+    ▪︎ 和同好讨论时，想引用一个相对中立的来源页面。<br>
+    ▪︎ 只是随便看看，没有特定目的——门户首页的浏览体验也比较轻松。</p>
+  </div>
+
+  <!-- FAQ 摘要：温和的常见疑问 -->
+  <h2>常见疑问 · 摘要</h2>
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="q">Q: 是否需要付费才能浏览内容？</div>
+      <div class="a">A: 大部分公开页面和信息是免费可见的。部分功能或深度内容可能需要账号绑定，具体以网站实际页面标注为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q: 网站打开较慢，如何改善？</div>
+      <div class="a">A: 可以尝试更换网络环境或使用更稳定的浏览器。如果页面加载异常，等一小段时间再刷新通常能恢复。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q: 链接有时会跳转到其他页面？</div>
+      <div class="a">A: 部分外部合作链接或推广内容会带有跳转功能。注意看链接旁的标识，一般会有文字提示。</div>
+    </div>
+  </div>
+
+  <!-- 温和结尾：像整理完笔记之后的落款 -->
+  <div class="ending">
+    <p>整理这些内容的目的，是希望每一次访问都少一些困惑，多一分清楚。</p>
+    <p>如果你觉得这份指南有遗漏或需要更新，不妨自己再补充几行笔记。<span class="small-note">—— 最后更新于 2025-03</span></p>
+  </div>
+
+  <hr>
+  <p class="small-note" style="margin-top:0.5rem;">
+    本页为独立介绍页，与 <a href="https://portal-leijingji.com">雷竞技</a> 无直接关联关系。内容仅供说明参考。
+  </p>
+
+</body>
+</html>
