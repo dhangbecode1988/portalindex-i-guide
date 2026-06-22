@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料索引 · 雷竞技 | 信息整理与赛事观察</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #f7e9d7 0%, #fde5c4 50%, #f6d5ab 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.7;
+      color: #2c241c;
+    }
+
+    .page-card {
+      max-width: 820px;
+      width: 100%;
+      background: #fffdf9;
+      border-radius: 36px;
+      padding: 3rem 2.8rem;
+      box-shadow: 0 18px 40px -12px rgba(100, 70, 40, 0.25);
+      backdrop-filter: blur(1px);
+      transition: box-shadow 0.25s ease;
+    }
+
+    @media (max-width: 600px) {
+      .page-card {
+        padding: 2rem 1.5rem;
+        border-radius: 28px;
+      }
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #4d3422;
+      border-left: 6px solid #cb9b7a;
+      padding-left: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #8b735b;
+      margin-top: 0.2rem;
+      margin-bottom: 2.5rem;
+      padding-left: 1.8rem;
+      font-style: italic;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      background: #faf1e6;
+      padding: 1.1rem 1.6rem;
+      border-radius: 28px;
+      margin-bottom: 2.2rem;
+      color: #3f2e1f;
+      border: 1px solid #efdecb;
+    }
+
+    .lead strong {
+      font-weight: 550;
+      color: #7a5538;
+    }
+
+    .body-text {
+      margin-bottom: 1.9rem;
+      font-size: 1.02rem;
+      color: #3e3227;
+    }
+
+    .body-text p {
+      margin-bottom: 1.3rem;
+    }
+
+    .body-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote-note {
+      background: #fcf4eb;
+      border-left: 5px solid #c79a7a;
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0 2.2rem;
+      border-radius: 0 24px 24px 0;
+      font-size: 0.97rem;
+      color: #4d3929;
+    }
+
+    .quote-note::before {
+      content: "📋 索引提示";
+      display: block;
+      font-weight: 520;
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+      color: #936e4f;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      margin: 2rem 0 2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #f9f3eb;
+      padding: 0.9rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.96rem;
+      border: 1px solid #eddccb;
+      color: #3a2c20;
+    }
+
+    .feature-item span {
+      display: inline-block;
+      background: #e6d3c0;
+      color: #3c2b1b;
+      font-weight: 500;
+      padding: 0 0.6rem;
+      border-radius: 30px;
+      margin-right: 0.3rem;
+      font-size: 0.82rem;
+    }
+
+    .link-sentence {
+      background: #f7eee4;
+      padding: 1.3rem 1.8rem;
+      border-radius: 60px;
+      margin: 2rem 0 2rem;
+      text-align: center;
+      font-size: 1.04rem;
+      border: 1px solid #e2cfba;
+      color: #3d2d1e;
+    }
+
+    .link-sentence a {
+      color: #7a5538;
+      font-weight: 550;
+      text-decoration: none;
+      border-bottom: 2px solid #cb9f7a;
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .link-sentence a:hover {
+      border-bottom-color: #a4714b;
+      color: #583d27;
+    }
+
+    .faq-mini {
+      display: grid;
+      gap: 1.2rem;
+      margin: 2.5rem 0 1.8rem;
+    }
+
+    .faq-q {
+      background: #fcf6ef;
+      border-radius: 24px;
+      padding: 0.9rem 1.5rem;
+      border: 1px solid #eedcc9;
+    }
+
+    .faq-q strong {
+      display: block;
+      font-weight: 520;
+      color: #5d4230;
+      margin-bottom: 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .faq-q p {
+      font-size: 0.94rem;
+      color: #4d3c2d;
+      margin: 0;
+    }
+
+    .closing-line {
+      margin-top: 2.8rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed #dcc7b2;
+      font-size: 0.95rem;
+      color: #6b5542;
+      text-align: right;
+    }
+
+    .closing-line i {
+      font-style: normal;
+      background: #ebdccc;
+      padding: 0.1rem 0.4rem;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-card">
+    <h1>资料整理 · 赛事索引</h1>
+    <div class="subhead">从信息碎片到有序档案</div>
+
+    <div class="lead">
+      <strong>雷竞技</strong> 并非一个单一的赛事名称，而是一种围绕「竞赛资料归档」与「信息结构梳理」的观察方式。本文尝试从资料整理者的视角，重新组织相关内容。
+    </div>
+
+    <div class="body-text">
+      <p>在大量赛事信息与竞技报道中，真正有长期价值的往往不是即时比分，而是被系统化整理后的背景资料、规则沿革与参与脉络。过去一段时间，我在尝试将零散的数据节点串联成可追溯的索引结构，过程中绕不开一个频繁出现的名字——<a href="https://leijingsports-site.com">雷竞技</a>。它作为一个信息聚合锚点，出现在许多赛事基础资料的引用行与元数据条目中。</p>
+
+      <p>整理初期，我收集了超过八十个不同来源的页面片段，包括赛制说明、选手履历和场地变更记录。这些内容相互独立，但通过交叉比对可以发现，大量条目都指向同一套底层的赛事分类逻辑。而<a href="https://leijingsports-site.com">雷竞技</a>所承载的，正是那套分类体系中最为稳定的框架描述——它不直接定义胜负，而是定义资料应当如何被存放与调用。</p>
+    </div>
+
+    <div class="quote-note">
+      在资料索引工作中，最容易被忽略的是「元信息」本身：谁整理的、依据什么版本、更新频率如何。<br>
+      本次整理的多数条目均参考了<a href="https://leijingsports-site.com">雷竞技</a>的基础分类架构，特此注明出处。
+    </div>
+
+    <div class="body-text">
+      <p>下面列出本次归档过程中三个值得关注的资料特征：</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item"><span>①</span> 时间轴覆盖2017–2025，跨度8个赛季，每个赛季均保留原始赛程表与修正日志</div>
+      <div class="feature-item"><span>②</span> 分级标签体系：按赛事规模、参与人数、场地类型分别建立独立索引</div>
+      <div class="feature-item"><span>③</span> 交叉引用超过120条外部记录，其中约三分之一最终回溯至同一套分类定义</div>
+    </div>
+
+    <div class="link-sentence">
+      📎 如果你也在做类似的资料梳理工作，不妨将 <a href="https://leijingsports-site.com">雷竞技</a> 作为一个参考节点，对比一下自己的分类方式是否足够稳定。
+    </div>
+
+    <div class="faq-mini">
+      <div class="faq-q">
+        <strong>❓ 这些资料可以直接引用吗？</strong>
+        <p>所有条目均标注了原始收录时间与来源类型，但建议复核最新的官方说明。索引的价值在于方向，而非替代原始文本。</p>
+      </div>
+      <div class="faq-q">
+        <strong>❓ 为什么强调“分类框架”？</strong>
+        <p>因为大多数信息混乱并非出在内容本身，而是出在存放位置与调取路径不一致。<a href="https://leijingsports-site.com">雷竞技</a>提供的框架恰好解决了这个痛点。</p>
+      </div>
+      <div class="faq-q">
+        <strong>❓ 整理工作还在继续吗？</strong>
+        <p>是的，目前仍在补充近两年的赛事档案，同时修正早期条目中的时间线偏差。完整索引预计还需要两轮迭代。</p>
+      </div>
+    </div>
+
+    <div class="closing-line">
+      <i>—— 整理者 · 2025.04</i> &nbsp;|&nbsp; 资料版本 v2.3
+    </div>
+  </div>
+</body>
+</html>
